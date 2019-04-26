@@ -17,11 +17,20 @@
     "name": "typicode"
   },
   "users": [
-
   {
     "id": 1,
     "nom":"nom",
     "prenom":"prenom"
+  },
+  {
+    "id": 2,
+    "nom": "Po",
+    "prenom": "Lyne"
+  },
+  {
+    "id": 3,
+    "nom": "Allez",
+    "prenom":"Xandre"
   }
   ]
 }

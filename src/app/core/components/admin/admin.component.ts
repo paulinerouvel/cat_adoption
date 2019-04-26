@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthenticationService } from 'src/app/admin/services/authentication.service';
 import { ActivatedRoute } from '@angular/router';
+import { defineBase } from '@angular/core/src/render3';
 
 @Component({
   selector: 'app-admin',
@@ -15,6 +16,8 @@ export class AdminComponent implements OnInit {
     this.authenticationService.isUserAuthenticatedRest().subscribe(result=> {
         console.log(result);
     })
+    
+   
     console.log(this.activatedRoute.snapshot.paramMap.get('lastname'));
     console.log(this.activatedRoute.snapshot.paramMap.get('firstname'));
   
