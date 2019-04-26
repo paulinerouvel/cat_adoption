@@ -16,7 +16,8 @@ isUserAuthenticated() {
     observer.next(true);
   })
 }
-isUserAuthenticatedRest() : Observable<any> {
+
+isUserAuthenticatedRest() {
   return this.http.get('http://localhost:3000/users');
 }
 }
