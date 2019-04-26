@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthenticationService } from 'src/app/admin/services/authentication.service';
 
 @Component({
   selector: 'app-admin',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminComponent implements OnInit {
 
-  constructor() { }
+  constructor(private authenticationService:AuthenticationService) { }
 
   ngOnInit() {
+    this.authenticationService.isUserAuthenticated().subscribe((result)=> {
+        console.log(result);
+    })
   }
 
 }
