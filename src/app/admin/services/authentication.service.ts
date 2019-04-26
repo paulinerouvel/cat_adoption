@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Subject } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
 
 
 @Injectable({
@@ -8,11 +9,14 @@ import { Subject } from 'rxjs';
 })
 export class AuthenticationService {
 
-constructor() { }
+constructor(private http: HttpClient) { }
 
 isUserAuthenticated() {
   return new Observable<boolean>((observer) => {
     observer.next(true);
   })
+}
+isUserAuthenticatedRest() : Observable<any> {
+  return this.http.get('http://localhost:3000/users');
 }
 }

@@ -11,7 +11,7 @@ export class AdminComponent implements OnInit {
   constructor(private authenticationService:AuthenticationService) { }
 
   ngOnInit() {
-    this.authenticationService.isUserAuthenticated().subscribe((result)=> {
+    this.authenticationService.isUserAuthenticatedRest().subscribe((result)=> {
         console.log(result);
     })
   }
