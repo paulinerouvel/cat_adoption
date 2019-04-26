@@ -1,12 +1,13 @@
 import {NgModule} from '@angular/core';
 import { HomeComponent } from './components/home/home.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { AdminComponent } from './components/admin/admin.component';
 
 @NgModule({
-  declaration: [],
   imports: [],
   exports: [],
   providers: [],
-  declarations: [HomeComponent]
+  declarations: [HomeComponent, PageNotFoundComponent, AdminComponent]
 })
 
 export class CoreModule {}
